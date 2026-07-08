@@ -132,6 +132,3 @@ Global exception handling is implemented using `@ControllerAdvice` to return mea
 * Employees can be deleted successfully.
 * Invalid requests return appropriate HTTP error responses (400/404).
 
-## Author
-
-**Riya Tripathi**

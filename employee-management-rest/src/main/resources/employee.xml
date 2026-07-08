@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Skills -->
+
+    <bean id="javaSkill" class="com.cognizant.model.Skill">
+        <property name="id" value="1"/>
+        <property name="name" value="Java"/>
+    </bean>
+
+    <bean id="angularSkill" class="com.cognizant.model.Skill">
+        <property name="id" value="2"/>
+        <property name="name" value="Angular"/>
+    </bean>
+
+    <bean id="springSkill" class="com.cognizant.model.Skill">
+        <property name="id" value="3"/>
+        <property name="name" value="Spring"/>
+    </bean>
+
+    <!-- Departments -->
+
+    <bean id="itDept" class="com.cognizant.model.Department">
+        <property name="id" value="101"/>
+        <property name="name" value="IT"/>
+    </bean>
+
+    <bean id="hrDept" class="com.cognizant.model.Department">
+        <property name="id" value="102"/>
+        <property name="name" value="HR"/>
+    </bean>
+
+    <bean id="financeDept" class="com.cognizant.model.Department">
+        <property name="id" value="103"/>
+        <property name="name" value="Finance"/>
+    </bean>
+
+    <!-- Employees -->
+
+    <bean id="emp1" class="com.cognizant.model.Employee">
+        <property name="id" value="1001"/>
+        <property name="name" value="Riya"/>
+        <property name="salary" value="50000"/>
+        <property name="permanent" value="true"/>
+        <property name="department" ref="itDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="javaSkill"/>
+                <ref bean="springSkill"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp2" class="com.cognizant.model.Employee">
+        <property name="id" value="1002"/>
+        <property name="name" value="Rahul"/>
+        <property name="salary" value="55000"/>
+        <property name="permanent" value="true"/>
+        <property name="department" ref="hrDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="angularSkill"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp3" class="com.cognizant.model.Employee">
+        <property name="id" value="1003"/>
+        <property name="name" value="Ankit"/>
+        <property name="salary" value="65000"/>
+        <property name="permanent" value="false"/>
+        <property name="department" ref="financeDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="javaSkill"/>
+                <ref bean="angularSkill"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp4" class="com.cognizant.model.Employee">
+        <property name="id" value="1004"/>
+        <property name="name" value="Priya"/>
+        <property name="salary" value="70000"/>
+        <property name="permanent" value="true"/>
+        <property name="department" ref="itDept"/>
+        <property name="skills">
+            <list>
+                <ref bean="springSkill"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Employee List -->
+
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="emp1"/>
+                <ref bean="emp2"/>
+                <ref bean="emp3"/>
+                <ref bean="emp4"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!-- Department List -->
+
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="itDept"/>
+                <ref bean="hrDept"/>
+                <ref bean="financeDept"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

@@ -1,4 +1,4 @@
-# JUnit Basic Testing Exercises
+# JUnit Basic Testing Exercises.
 
 ## Objective
 

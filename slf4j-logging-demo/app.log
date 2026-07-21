@@ -1,0 +1,25 @@
+18:42:38.579
+                [main]
+                INFO 
+                c.s.AppenderLoggingExample
+                - Application Started
+18:42:38.582
+                [main]
+                DEBUG
+                c.s.AppenderLoggingExample
+                - Debug Message
+18:42:38.583
+                [main]
+                WARN 
+                c.s.AppenderLoggingExample
+                - Warning Message
+18:42:38.583
+                [main]
+                ERROR
+                c.s.AppenderLoggingExample
+                - Error Message
+18:42:38.583
+                [main]
+                INFO 
+                c.s.AppenderLoggingExample
+                - Application Finished
